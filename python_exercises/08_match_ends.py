@@ -16,7 +16,6 @@ def match_ends(words):
             palavras += c + ','
     palavras = palavras[:-1] 
     palavras = palavras.split(',')
-    print(palavras)
     for palavra in palavras:
         # print(f'{palavra} começa com {palavra[0]} e termina com {palavra[-1]}')
         if palavra[0] == palavra[-1]:
