@@ -14,10 +14,6 @@ def donuts(count):
         return f'Number of donuts: {count}'
     elif count >= 10:
         return 'Number of donuts: many'
-    
-
-        
-
 
 # --- Daqui para baixo são apenas códigos auxiliáries de teste. ---
 

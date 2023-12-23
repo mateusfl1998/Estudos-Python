@@ -1,0 +1,31 @@
+def both_ends(s):
+    if len(s) < 2:
+        return ''
+    else:
+        return s[:2] + s[-2:]
+
+# --- Daqui para baixo são apenas códigos auxiliares de teste. ---
+
+def test(f, in_, expected):
+    """
+    Executa a função f com o parâmetro in_ e compara o resultado com expected.
+    :return: Exibe uma mensagem indicando se a função f está correta ou não.
+    """
+    out = f(in_)
+
+    if out == expected:
+        sign = '✅'
+        info = ''
+    else:
+        sign = '❌'
+        info = f'e o correto é {expected!r}'
+
+    print(f'{sign} {f.__name__}({in_!r}) retornou {out!r} {info}')
+
+
+if __name__ == '__main__':
+    # Testes que verificam o resultado do seu código em alguns cenários.
+    test(both_ends, 'spring', 'spng')
+    test(both_ends, 'Hello', 'Helo')
+    test(both_ends, 'a', '')
+    test(both_ends, 'xyz', 'xyyz')
