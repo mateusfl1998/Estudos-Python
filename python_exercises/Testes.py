@@ -1,8 +1,13 @@
-def donuts(count):
-    if count <= 10: 
-        print(f'Number of donuts: {count}')
-    elif count > 10:
-        print(f'Number of donuts: many')
-    return count
+def remove_adjacent(nums):
+    resultado = []
+    if len(nums) > 1:
+        resultado = [nums[0]]
+    for num in nums:
+        if num != resultado[-1]:
+            resultado.append(num)
+    
+    print()
+    print(resultado)
+            
 
-donuts(99)
+remove_adjacent([])
