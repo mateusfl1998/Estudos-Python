@@ -53,13 +53,87 @@ e conferindo cada etapa do seu progresso.
 
 import sys
 
+filename = 'letras.txt'
 
-# +++ SUA SOLUÇÃO +++
-# Defina as funções print_words(filename) e print_top(filename).
+def print_words(filename):
+    try:
+        a = open(filename, 'rt')
 
+    except:
+        print('Erro ao abrir arquivo')
+    else:
+        try:
+            conteudo = a.read()
+        except:
+            print('Erro ao ler arquivo')
+        else:
+            try:
+                lista_carecteres_n_repetidos = []
+                lista = conteudo.split(' ')
+                lista = list(map(str.upper, lista))
+                quantidade_de_itens = []
+                contador = 0
+                # print(lista)
+                for i in lista:
+                    if i not in lista_carecteres_n_repetidos:
+                        lista_carecteres_n_repetidos.append(i)
+                lista_carecteres_n_repetidos.sort()
+                # print(lista_carecteres_n_repetidos)
+                for i in lista_carecteres_n_repetidos:
+                            quantidade_de_itens.append(lista.count(i))
+                for i in lista_carecteres_n_repetidos:
+                     print(i, quantidade_de_itens[contador] )
+                     contador  += 1
+                     
+            except:
+                print('erro')
+            else:
+                pass
 
-# A função abaixo chama print_words() ou print_top() de acordo com os
-# parêtros do programa.
+def print_top(filename):
+    try:
+        a = open(filename, 'rt')
+
+    except:
+        print('Erro ao abrir arquivo')
+    else:
+        try:
+            conteudo = a.read()
+        except:
+            print('Erro ao ler arquivo')
+        else:
+            try:
+                lista_carecteres_n_repetidos = []
+                lista = conteudo.split(' ')
+                lista = list(map(str.upper, lista))
+                quantidade_de_itens = []
+                contador = 0
+                lista2 = []
+                # print(lista)
+                for i in lista:
+                    if i not in lista_carecteres_n_repetidos:
+                        lista_carecteres_n_repetidos.append(i)
+                lista_carecteres_n_repetidos.sort()
+                # print(lista_carecteres_n_repetidos)
+                for i in lista_carecteres_n_repetidos:
+                            quantidade_de_itens.append(lista.count(i))
+                # print(quantidade_de_itens)
+                for i in lista_carecteres_n_repetidos:
+                     lista2.append((lista_carecteres_n_repetidos[contador],quantidade_de_itens[contador]) )
+                     contador += 1
+                nova_lista = []
+                for i in lista2:
+                    i = list(i)
+                    i = f'{i[0]} tem {i[1]} repetições'
+                    nova_lista.append(i)
+                for c in nova_lista:
+                     print(c)
+                    
+            except:
+                print('erro')
+            else:
+                pass
+
 def main():
     if len(sys.argv) != 3:
         print('Utilização: ./13_wordcount.py {--count | --topcount} file')
