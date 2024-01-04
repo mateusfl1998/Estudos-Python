@@ -1,0 +1,2 @@
+
+The "IndexError: list index out of range" error indicates that you are trying to access an index in a list that doesn't exist. This often happens when the index you are using is greater than or equal to the length of the list.
