@@ -10,7 +10,7 @@ e donuts(23) retorna 'Number of donuts: many'
 """
 
 def donuts(count):
-    if count < 10: 
+    if count > 10: 
         return f'Number of donuts: {count}'
     elif count >= 10:
         return 'Number of donuts: many'
