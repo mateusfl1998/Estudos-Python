@@ -13,3 +13,6 @@ class Celular:
 
     def despertar(self):
         print('Despertando...')
+
+class Samsung(Celular):
+    modelo = 'a10S'
