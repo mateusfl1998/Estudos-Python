@@ -10,4 +10,3 @@ def menu(lista):
         print (f'{opcoes[contador]} - {i}')
         contador += 1
     print('=' * 50)
-    
