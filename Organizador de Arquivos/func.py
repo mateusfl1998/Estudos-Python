@@ -38,7 +38,7 @@ def move_archives():
         if i[-5:] == '.docx' or i[-4:] == '.txt':
             shutil.move(arquivo, '/Users/MTec Celulares/Desktop/Pasta Arquivos World e TXT')
         elif i != 'Organizador de Arquivos' or i != 'Pasta Para Pastas':
-            shutil.move(arquivo, '/Users/MTec Celulares/Desktop/Pasta Para Pastas')
+            pass
 
 move_archives()
     
