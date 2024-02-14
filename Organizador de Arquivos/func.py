@@ -19,46 +19,6 @@ def criando_pastas(diretorio):
         diretorio = f'/Users/MTec Celulares/Desktop/{nomes_das_pastas[contador]}'
         os.makedirs(diretorio)
         contador +=1
-
-# criando_pastas('/Users/MTec Celulares/Desktop')
-
-# def move_archives():
-#     contador = 0
-#     diretorio_padrao = '/Users/MTec Celulares/Desktop'
-#     arquivos = os.listdir(diretorio_padrao)
-#     print(diretorio_com_arquivo)
-#     for i in arquivos:
-#     diretorio_com_arquivo = f'{diretorio_padrao}/{item} '
-#         item = arquivos[contador]
-#         if item[-4:] == '.zip':
-#             item = arquivos[contador]
-#             shutil.move(diretorio_com_arquivo, '/Users/MTec Celulares/Desktop/Pasta Arquivos Rar')
-#             contador +=1
-#         if item[-4:] == '.Pdf':
-#             item = arquivos[contador]
-#             shutil.move(diretorio_com_arquivo, '/Users/MTec Celulares/Desktop/Pasta Arquivos PDF')
-#             contador +=1
-#         if item[-4:] == '.docx':
-#             item = arquivos[contador]
-#             shutil.move(diretorio_com_arquivo, '/Users/MTec Celulares/Desktop/Pasta Arquivos World')
-#             contador +=1
-#         if item[-4:] == '.png':
-#             item = arquivos[contador]
-#             shutil.move(diretorio_com_arquivo, '/Users/MTec Celulares/Desktop/Pasta Arquivos PNG')
-#             contador +=1
-#         if item[-4:] == '.jpg':
-#             item = arquivos[contador]
-#             shutil.move(diretorio_com_arquivo, '/Users/MTec Celulares/Desktop/Pasta Arquivos JPG')
-#             contador +=1
-#         if item[-4:] == '.rar':
-#             item = arquivos[contador]
-#             shutil.move(diretorio_com_arquivo, '/Users/MTec Celulares/Desktop/Pasta Arquivos Rar')
-#             contador +=1
-#         if item[-4:] == '.Pdf':
-#             item = arquivos[contador]
-#             shutil.move(diretorio_com_arquivo, '/Users/MTec Celulares/Desktop/Pasta Arquivos PDF')
-#             contador +=1
-
 def move_archives():
     diretorio = os.listdir('/Users/MTec Celulares/Desktop')
     n = 0
